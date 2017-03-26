@@ -591,7 +591,8 @@ int main(int argc, char *argv[])
                   _fill = _slope;
                }
 
-               for (int tcol = _leftbank + 1, indx=1; tcol < _rightbank; tcol++, indx++)
+               int indx, tcol;
+               for (tcol = _leftbank + 1, indx = 1; tcol < _rightbank; tcol++, indx++)
                {
                   grid[row][tcol] = grid[row][_leftbank] + (indx * _fill);
                   FixedHoles++;
